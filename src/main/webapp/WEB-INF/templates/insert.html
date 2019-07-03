@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin: 50px auto 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            width: 100px;
+            height: 30px;
+        }
+        .cell {
+            display: inline-block;
+        }
+        .row {
+            margin: 0 auto;
+            width: 800px;
+        }
+        .row + .row {
+            margin-top: 30px;
+        }
+        .row:nth-of-type(1) {
+            margin-top: 100px;
+        }
+        .row:nth-of-type(5) {
+            margin-bottom: 100px;
+        }
+        label {
+            display: inline-block;
+            width: 50px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .cell {
+            margin-right: 50px;
+        }
+        input {
+            height: 25px;
+            width: 250px;
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            background-color: rgba(22, 155, 213, 1);
+            border-radius: 10px;
+            border: 0;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" th:action="@{/insert}">
+    <div id="top">
+        <div class="row">
+            <div class="cell">
+                <label for="empno">empno</label><input type="text" name="empno" id="empno">
+            </div>
+            <div class="cell">
+                <label for="ename">ename</label><input type="text" name="ename" id="ename">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
+                <label for="mgr">mgr</label><input type="text" name="mgr" id="mgr">
+            </div>
+            <div class="cell">
+                <label for="job">job</label><input type="text" name="job" id="job">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
+                <label for="hiredate">hire</label><input type="text" name="hiredate" id="hiredate">
+            </div>
+            <div class="cell">
+                <label for="sal">sal</label><input type="text" name="sal" id="sal">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
+                <label for="com">com</label><input type="text" name="com" id="com">
+            </div>
+            <div class="cell">
+                <label for="deptno">deptno</label><input type="text" name="deptno" id="deptno">
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit">add</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--定义命名空间 namespace-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:object="${emp}">
+    <div th:text="*{empno}"></div>
+    <div th:text="*{ename}"></div>
+    <div th:text="*{job}"></div>
+    <div th:text="*{mgr}"></div>
+    <div th:text="*{hiredate}"></div>
+    <div th:text="*{sal}"></div>
+    <div th:text="*{com}"></div>
+    <div th:text="*{deptno}"></div>
+</div>
+</body>
+</html>

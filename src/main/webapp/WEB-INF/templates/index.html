@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--定义命名空间 namespace-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--/*@thymesVar id="username" type="com.cheer"*/-->
+<h1 th:text="${#request.getAttribute('username')}"></h1>
+<input type="text" name="" id="" th:value="${username}">
+</body>
+</html>
